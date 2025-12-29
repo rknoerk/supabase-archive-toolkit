@@ -1,0 +1,16 @@
+# Environment variables (contains secrets)
+.env
+
+# Backups (too large for git, store separately)
+backups/
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

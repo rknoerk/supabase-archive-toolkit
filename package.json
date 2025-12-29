@@ -1,0 +1,16 @@
+{
+  "name": "supabase-archive-toolkit",
+  "version": "1.0.0",
+  "description": "Backup and restore Supabase projects for archiving",
+  "scripts": {
+    "backup": "./backup.sh",
+    "restore": "./restore.sh",
+    "backup:storage": "node scripts/backup-storage.js",
+    "restore:storage": "node scripts/restore-storage.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.3.1",
+    "fs-extra": "^11.2.0"
+  }
+}
