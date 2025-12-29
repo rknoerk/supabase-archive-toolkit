@@ -40,7 +40,7 @@ check_tool() {
 }
 
 check_tool "pg_dump" "brew install postgresql"
-check_tool "node" "brew install node"
+check_tool "python3" "brew install python3"
 
 # 1. Backup database schema
 echo -e "\n${GREEN}[1/4] Backing up database schema...${NC}"
@@ -73,7 +73,7 @@ echo "Full backup saved to $BACKUP_DIR/full_backup.sql"
 
 # 4. Backup storage files
 echo -e "\n${GREEN}[4/4] Backing up storage files...${NC}"
-BACKUP_DIR="$BACKUP_DIR" node scripts/backup-storage.js
+BACKUP_DIR="$BACKUP_DIR" python3 scripts/backup-storage.py
 
 # Save metadata
 echo -e "\n${GREEN}Saving backup metadata...${NC}"
